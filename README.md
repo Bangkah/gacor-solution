@@ -1,1 +1,1 @@
-# gacor-soluton
+# gacor solution
