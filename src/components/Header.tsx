@@ -29,9 +29,13 @@ const Header: React.FC<HeaderProps> = ({ activeSection, setActiveSection }) => {
           <div 
             className="flex items-center space-x-2 cursor-pointer"
             onClick={() => handleNavClick('home')}
+            role="button"
+            tabIndex={0}
+            onKeyDown={(e) => e.key === 'Enter' && handleNavClick('home')}
+            aria-label="GacorSolution - Kembali ke beranda"
           >
             <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-2 rounded-lg">
-              <Code2 className="h-6 w-6 text-white" />
+              <Code2 className="h-6 w-6 text-white" aria-hidden="true" />
             </div>
             <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
               GacorSolution
@@ -59,6 +63,8 @@ const Header: React.FC<HeaderProps> = ({ activeSection, setActiveSection }) => {
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="md:hidden p-2 rounded-md text-gray-700 hover:text-blue-600 hover:bg-gray-100"
+          aria-label={isMobileMenuOpen ? 'Tutup menu' : 'Buka menu'}
+          aria-expanded={isMobileMenuOpen}
           >
             {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
