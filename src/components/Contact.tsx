@@ -83,21 +83,14 @@ const Contact: React.FC = () => {
               <h4 className="font-semibold text-gray-900 mb-4">Ikuti Kami</h4>
               <div className="flex space-x-4">
                 <a
-                  href="https://instagram.com/gacorsolution"
+                  href="https://instagram.com/mdhiyaulatha"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-gradient-to-r from-pink-500 to-purple-600 p-3 rounded-lg text-white hover:shadow-lg transform hover:scale-105 transition-all duration-200"
                 >
                   <Instagram className="h-6 w-6" />
                 </a>
-                <a
-                  href="https://facebook.com/gacorsolution"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-blue-600 p-3 rounded-lg text-white hover:shadow-lg transform hover:scale-105 transition-all duration-200"
-                >
-                  <Facebook className="h-6 w-6" />
-                </a>
+            
               </div>
             </div>
           </div>
