@@ -1,6 +1,7 @@
 import React from 'react';
 import { MessageCircle, Mail, Instagram, Facebook, MapPin, Clock, Phone } from 'lucide-react';
 import { sendWhatsAppMessage } from '../utils/whatsapp';
+import SEO from './SEO';
 import SEO from './SEO'; // pastikan komponen SEO sudah ada
 
 const Contact: React.FC = () => {
@@ -16,6 +17,13 @@ const Contact: React.FC = () => {
 
   return (
     <>
+      <SEO
+        title="Hubungi Kami - Konsultasi Gratis Website & Source Code"
+        description="Hubungi tim GacorSolution untuk konsultasi gratis kebutuhan website dan source code Anda. WhatsApp 24/7, email support, dan media sosial. Response time kurang dari 1 jam."
+        keywords="kontak GacorSolution, konsultasi website gratis, WhatsApp web developer, jasa website murah, support 24/7"
+        url="https://gacorsolution.com/contact"
+      />
+      <section className="py-16 bg-gray-50">
       {/* SEO */}
       <SEO
         title="Hubungi GacorSolution - Konsultasi & Order Source Code"
@@ -106,7 +114,7 @@ const Contact: React.FC = () => {
 
             {/* Quick Contact */}
             <div className="bg-white rounded-xl shadow-lg p-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Mulai Project Anda</h3>
+              <h2 className="text-2xl font-bold text-gray-900 mb-6">Informasi Kontak</h2>
               
               <div className="space-y-6">
                 <div className="text-center">
@@ -159,7 +167,7 @@ const Contact: React.FC = () => {
 
           {/* FAQ Section */}
           <div className="mt-16">
-            <h3 className="text-2xl font-bold text-gray-900 text-center mb-8">Pertanyaan Umum</h3>
+           <h2 className="text-2xl font-bold text-gray-900 mb-6">Mulai Project Anda</h2>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="bg-white rounded-lg p-6 shadow-md">
@@ -197,6 +205,7 @@ const Contact: React.FC = () => {
           </div>
         </div>
       </section>
+    </>
     </>
   );
 };

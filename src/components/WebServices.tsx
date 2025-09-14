@@ -1,6 +1,7 @@
 import React from 'react';
 import { Globe, Check, MessageCircle, Star } from 'lucide-react';
 import { sendWhatsAppMessage } from '../utils/whatsapp';
+import SEO from './SEO';
 
 interface WebServicePackage {
   id: number;
@@ -102,12 +103,19 @@ const WebServices: React.FC = () => {
   };
 
   return (
-    <section className="py-16 bg-white">
+    <>
+      <SEO
+        title="Jasa Pembuatan Website Profesional - Landing Page, Toko Online, Custom System"
+        description="Layanan pembuatan website profesional dengan 3 paket pilihan: Basic (Landing Page), Bisnis (Toko Online), Premium (Custom System). Harga terjangkau, kualitas terjamin, support lengkap."
+        keywords="jasa pembuatan website, website murah, landing page, toko online, custom website, web development service, website UMKM, website bisnis"
+        url="https://gacorsolution.com/web-services"
+      />
+      <section className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             Jasa Pembuatan Website Profesional
-          </h2>
+          </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Wujudkan website impian Anda dengan layanan pembuatan website profesional yang disesuaikan dengan kebutuhan dan budget Anda.
           </p>
@@ -119,7 +127,7 @@ const WebServices: React.FC = () => {
               {packageItem.popular && (
                 <div className="absolute top-0 right-0 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-bl-lg">
                   <div className="flex items-center space-x-1">
-                    <Star className="h-4 w-4" />
+                    <Star className="h-4 w-4" aria-hidden="true" />
                     <span className="text-sm font-medium">Populer</span>
                   </div>
                 </div>
@@ -128,11 +136,11 @@ const WebServices: React.FC = () => {
               <div className="p-8">
                 <div className="flex items-center mb-4">
                   <div className={`p-3 rounded-lg ${packageItem.popular ? 'bg-blue-100' : 'bg-gray-100'}`}>
-                    <Globe className={`h-8 w-8 ${packageItem.popular ? 'text-blue-600' : 'text-gray-600'}`} />
+                    <Globe className={`h-8 w-8 ${packageItem.popular ? 'text-blue-600' : 'text-gray-600'}`} aria-hidden="true" />
                   </div>
                 </div>
                 
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">{packageItem.name}</h3>
+                <h2 className="text-2xl font-bold text-gray-900 mb-2">{packageItem.name}</h2>
                 <p className="text-gray-600 mb-6">{packageItem.description}</p>
                 
                 <div className="mb-6">
@@ -148,7 +156,7 @@ const WebServices: React.FC = () => {
                 <ul className="space-y-3 mb-8">
                   {packageItem.features.map((feature, index) => (
                     <li key={index} className="flex items-start">
-                      <Check className="h-5 w-5 text-green-600 mr-3 mt-0.5 flex-shrink-0" />
+                      <Check className="h-5 w-5 text-green-600 mr-3 mt-0.5 flex-shrink-0" aria-hidden="true" />
                       <span className="text-gray-700 text-sm">{feature}</span>
                     </li>
                   ))}
@@ -161,8 +169,9 @@ const WebServices: React.FC = () => {
                       ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:shadow-lg transform hover:scale-105'
                       : 'border-2 border-gray-300 text-gray-700 hover:border-blue-600 hover:text-blue-600'
                   }`}
+                  aria-label={`Order ${packageItem.name} via WhatsApp`}
                 >
-                  <MessageCircle className="h-4 w-4" />
+                  <MessageCircle className="h-4 w-4" aria-hidden="true" />
                   <span>Order Paket Ini</span>
                 </button>
               </div>
@@ -172,22 +181,23 @@ const WebServices: React.FC = () => {
 
         {/* Additional Services */}
         <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl p-8 text-center">
-          <h3 className="text-2xl font-bold text-gray-900 mb-4">Butuh Solusi Custom?</h3>
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">Butuh Solusi Custom?</h2>
           <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
             Setiap bisnis memiliki kebutuhan yang unik. Konsultasikan kebutuhan website Anda dengan tim ahli kami untuk mendapatkan solusi yang tepat dan sesuai budget.
           </p>
           <button
             onClick={handleConsultationClick}
             className="bg-white text-blue-600 px-8 py-4 rounded-full font-semibold text-lg border-2 border-blue-600 hover:bg-blue-600 hover:text-white transition-colors duration-200 flex items-center mx-auto space-x-2"
+            aria-label="Konsultasi gratis via WhatsApp"
           >
-            <MessageCircle className="h-6 w-6" />
+            <MessageCircle className="h-6 w-6" aria-hidden="true" />
             <span>Konsultasi Gratis</span>
           </button>
         </div>
 
         {/* Portfolio Preview */}
         <div className="mt-16 text-center">
-          <h3 className="text-2xl font-bold text-gray-900 mb-4">Mengapa Memilih GacorSolution?</h3>
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">Mengapa Memilih GacorSolution?</h2>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-8">
             <div className="text-center">
               <div className="text-3xl font-bold text-blue-600 mb-2">100+</div>
@@ -209,6 +219,7 @@ const WebServices: React.FC = () => {
         </div>
       </div>
     </section>
+    </>
   );
 };
 

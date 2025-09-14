@@ -1,7 +1,7 @@
 import React from 'react';
 import { MessageCircle, Code2, Globe, Zap } from 'lucide-react';
 import { sendWhatsAppMessage } from '../utils/whatsapp';
-import SEO from './SEO'; 
+import SEO from './SEO';
 
 const Hero: React.FC = () => {
   const handleOrderClick = () => {
@@ -18,12 +18,11 @@ const Hero: React.FC = () => {
   return (
     <>
       <SEO
-        title="GacorSolution - Source Code & Web Development Services"
-        description="Selamat datang di GacorSolution! Penyedia source code premium dan jasa pembuatan website profesional untuk siswa, mahasiswa, UMKM, hingga lembaga pemerintah."
-        url="https://gacorsolution.vercel.app"
-        image="/src/assets/images/muslim-life.png"
+        title="GacorSolution - Source Code Premium & Jasa Website Profesional"
+        description="Penyedia source code berkualitas tinggi dan jasa pembuatan website profesional di Indonesia. Solusi teknologi terpercaya dengan harga terjangkau untuk kebutuhan digital Anda."
+        keywords="source code premium, jasa website profesional, pembuatan website murah, PHP MySQL, React JavaScript, web development Indonesia, programmer terpercaya"
+        url="https://gacorsolution.com"
       />
-
       <section className="bg-gradient-to-br from-blue-50 to-purple-50 py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -49,9 +48,9 @@ const Hero: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
             <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
               <div className="bg-blue-100 p-3 rounded-lg w-fit mb-4">
-                <Code2 className="h-8 w-8 text-blue-600" />
+                <Code2 className="h-8 w-8 text-blue-600" aria-hidden="true" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Source Code Premium</h3>
+              <h2 className="text-xl font-bold text-gray-900 mb-3">Source Code Premium</h2>
               <p className="text-gray-600">
                 Koleksi source code siap pakai dengan kualitas tinggi, dokumentasi lengkap, 
                 dan support penuh untuk berbagai kebutuhan project Anda.
@@ -60,9 +59,9 @@ const Hero: React.FC = () => {
 
             <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
               <div className="bg-purple-100 p-3 rounded-lg w-fit mb-4">
-                <Globe className="h-8 w-8 text-purple-600" />
+                <Globe className="h-8 w-8 text-purple-600" aria-hidden="true" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Jasa Website Profesional</h3>
+              <h2 className="text-xl font-bold text-gray-900 mb-3">Jasa Website Profesional</h2>
               <p className="text-gray-600">
                 Layanan pembuatan website custom dari landing page hingga sistem kompleks, 
                 disesuaikan dengan kebutuhan dan budget Anda.
@@ -71,9 +70,9 @@ const Hero: React.FC = () => {
 
             <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
               <div className="bg-green-100 p-3 rounded-lg w-fit mb-4">
-                <Zap className="h-8 w-8 text-green-600" />
+                <Zap className="h-8 w-8 text-green-600" aria-hidden="true" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Pelayanan Cepat</h3>
+              <h2 className="text-xl font-bold text-gray-900 mb-3">Pelayanan Cepat</h2>
               <p className="text-gray-600">
                 Proses order mudah via WhatsApp, pengerjaan cepat, dan support after-sales 
                 yang responsif untuk kepuasan pelanggan.

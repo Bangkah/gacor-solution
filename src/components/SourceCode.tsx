@@ -1,6 +1,7 @@
 import React from 'react';
 import { Code2, Star, MessageCircle } from 'lucide-react';
 import { sendWhatsAppMessage } from '../utils/whatsapp';
+import SEO from './SEO';
 
 // Import gambar dari folder lokal
 import muslimLifeImg from '../assets/images/muslim-life.png';
@@ -89,11 +90,18 @@ const SourceCode: React.FC = () => {
   };
 
   return (
-    <section className="py-16 bg-gray-50">
+    <>
+      <SEO
+        title="Katalog Source Code Premium - PHP, MySQL, JavaScript, React"
+        description="Koleksi source code berkualitas tinggi siap pakai untuk berbagai kebutuhan development. Sistem login, CRUD, e-commerce, inventory, dan portfolio website dengan dokumentasi lengkap."
+        keywords="source code PHP, sistem login MySQL, CRUD mahasiswa, template portfolio, inventory system, toko online, source code premium, download source code"
+        url="https://gacorsolution.com/source-code"
+      />
+      <section className="py-16 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Judul & intro */}
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Katalog Source Code</h2>
+          <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Pilih project siap pakai / bisa dikustom sesuai kebutuhan Anda.
           </p>
@@ -108,19 +116,19 @@ const SourceCode: React.FC = () => {
               <div className="p-6">
                 <div className="flex items-center justify-between mb-4">
                   <div className="bg-blue-100 p-2 rounded-lg">
-                    <Code2 className="h-6 w-6 text-blue-600" />
+                    <Code2 className="h-6 w-6 text-blue-600" aria-hidden="true" />
                   </div>
                   <div className="flex items-center space-x-1">
-                    <Star className="h-4 w-4 text-yellow-500 fill-current" />
+                    <Star className="h-4 w-4 text-yellow-500 fill-current" aria-hidden="true" />
                     <span className="text-sm font-medium text-gray-700">{project.rating}</span>
                   </div>
                 </div>
                 
-                <h3 className="text-xl font-bold text-gray-900 mb-2">{project.name}</h3>
+                <h2 className="text-xl font-bold text-gray-900 mb-2">{project.name}</h2>
                 <p className="text-gray-600 mb-4 text-sm leading-relaxed">{project.description}</p>
                 
                 <div className="mb-4">
-                  <h4 className="font-semibold text-gray-900 mb-2">Fitur Utama:</h4>
+                  <h3 className="font-semibold text-gray-900 mb-2">Fitur Utama:</h3>
                   <ul className="text-sm text-gray-600 space-y-1">
                     {project.features.map((feature, index) => (
                       <li key={index} className="flex items-center">
@@ -144,8 +152,9 @@ const SourceCode: React.FC = () => {
                   <button
                     onClick={() => handleOrderClick(project)}
                     className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg font-semibold text-sm hover:shadow-lg transform hover:scale-105 transition-all duration-200 flex items-center space-x-2"
+                    aria-label={`Order ${project.name} via WhatsApp`}
                   >
-                    <MessageCircle className="h-4 w-4" />
+                    <MessageCircle className="h-4 w-4" aria-hidden="true" />
                     <span>Order</span>
                   </button>
                 </div>
@@ -180,6 +189,7 @@ const SourceCode: React.FC = () => {
         </div>
       </div>
     </section>
+    </>
   );
 };
 
