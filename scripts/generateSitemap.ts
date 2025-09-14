@@ -6,7 +6,6 @@ const pages = [
   "/",
   "/source-code",
   "/contact"
-  // Tambahkan halaman baru di sini
 ];
 
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
