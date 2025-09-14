@@ -1,20 +1,29 @@
-  import React from 'react';
-  import { MessageCircle, Code2, Globe, Zap } from 'lucide-react';
-  import { sendWhatsAppMessage } from '../utils/whatsapp';
+import React from 'react';
+import { MessageCircle, Code2, Globe, Zap } from 'lucide-react';
+import { sendWhatsAppMessage } from '../utils/whatsapp';
+import SEO from './SEO'; 
 
-  const Hero: React.FC = () => {
-    const handleOrderClick = () => {
-      const message = `Halo GacorSolution, saya ingin mengetahui lebih lanjut tentang layanan Anda:
+const Hero: React.FC = () => {
+  const handleOrderClick = () => {
+    const message = `Halo GacorSolution, saya ingin mengetahui lebih lanjut tentang layanan Anda:
 
-  * Produk: [Konsultasi Umum]
-  * Nama: [Isi Nama Anda]
-  * Email: [Isi Email Anda]
-  * Kebutuhan Tambahan: [Opsional]`;
+* Produk: [Konsultasi Umum]
+* Nama: [Isi Nama Anda]
+* Email: [Isi Email Anda]
+* Kebutuhan Tambahan: [Opsional]`;
 
-      sendWhatsAppMessage(message);
-    };
+    sendWhatsAppMessage(message);
+  };
 
-    return (
+  return (
+    <>
+      <SEO
+        title="GacorSolution - Source Code & Web Development Services"
+        description="Selamat datang di GacorSolution! Penyedia source code premium dan jasa pembuatan website profesional untuk siswa, mahasiswa, UMKM, hingga lembaga pemerintah."
+        url="https://gacorsolution.vercel.app"
+        image="/src/assets/images/muslim-life.png"
+      />
+
       <section className="bg-gradient-to-br from-blue-50 to-purple-50 py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -73,7 +82,8 @@
           </div>
         </div>
       </section>
-    );
-  };
+    </>
+  );
+};
 
-  export default Hero;
+export default Hero;
