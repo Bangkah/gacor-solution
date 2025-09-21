@@ -1,4 +1,4 @@
 # gacor solution
 
-**demo: **
+**demo:** 
 https://gacor-solution.vercel.app/
